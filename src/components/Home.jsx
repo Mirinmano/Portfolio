@@ -1,39 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
 const Home = () => {
-  return (
-    <div className="hero min-h-screen bg-black" data-aos="fade-out"
-    data-aos-delay="300">
-      <div className="hero-content flex-col lg:flex-row-reverse gap-12">
+  // This useEffect hook handles the cursor light effect
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      document.body.style.setProperty('--x', `${e.clientX}px`);
+      document.body.style.setProperty('--y', `${e.clientY}px`);
+    };
 
-        {/* Profile picture */}
-        <div className="avatar">
-          <div className="w-64 rounded-full shadow-2xl">
-            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Mirin Mano" />
-          </div>
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div className="hero min-h-screen" data-aos="fade-in" data-aos-delay="300">
+      <div className="hero-content flex-col lg:flex-row-reverse gap-12 lg:gap-24">
+
+        {/* --- Profile Picture with Floating Animation --- */}
+        <div className="w-64 h-64 lg:w-80 lg:h-80 animate-subtle-float">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            alt="Mirin Mano"
+            className="rounded-full w-full h-full object-cover shadow-2xl shadow-primary/20"
+          />
         </div>
 
         <div className="text-center lg:text-left p-2">
-          <h1 className="text-5xl font-bold">Hi, I'm Mirin Mano M</h1>
-          <h2 className="text-3xl text-primary mt-2">
-            <Typewriter style={{fontSize:'4rem'}}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Hi, I'm Mirin Mano M</h1>
+          <div className="text-2xl md:text-3xl text-primary mt-2 h-10">
+            <Typewriter
               options={{
                 strings: [
                   'Software Developer',
                   'Full Stack Developer (MERN)',
                   'Cybersecurity Enthusiast',
-                  'Problem Solver (500+ LeetCode)',
+                  'Problem Solver (600+ LeetCode)',
                   'Tech Explorer 🚀'
                 ],
                 autoStart: true,
                 loop: true,
+                wrapperClassName: 'text-2xl md:text-3xl'
               }}
             />
-          </h2>
+          </div>
 
-          <div className="flex gap-4 justify-center lg:justify-start p-2">
-            <a href="#projects" className="btn btn-primary">View My Work</a>
+          <div className="flex gap-4 justify-center lg:justify-start p-2 mt-8">
+            <a href="#portfolio" className="btn btn-primary">View My Work</a>
             <a href="#contact" className="btn btn-outline">Contact Me</a>
           </div>
 

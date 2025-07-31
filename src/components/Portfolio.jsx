@@ -15,12 +15,17 @@ const Portfolio = () => {
         "Automated backup and restoration functionality",
         "Anomaly detection using ML algorithms",
         "Interactive visualization dashboard"
+      ],
+      // Added images array
+      images: [
+        '/portfolio/file_integrity_1.png',
+        '/portfolio/file_integrity_2.png',
       ]
     },
     {
       id: 2,
       title: "WebLocker Extension",
-      description: "A Chrome extension for enhanced online security and productivity. Features include website blocking during focus hours, malicious URL detection, and browsing habit analytics. Implemented with real-time content scanning and customizable blocking rules to help users maintain digital wellbeing.",
+      description: "A Chrome extension for enhanced online security and productivity. Features include website blocking during focus hours, malicious URL detection, and Browse habit analytics. Implemented with real-time content scanning and customizable blocking rules to help users maintain digital wellbeing.",
       technologies: ["JavaScript", "Chrome APIs", "HTML/CSS", "Firebase"],
       period: "Feb 2025",
       isTeamProject: false,
@@ -29,6 +34,11 @@ const Portfolio = () => {
         "Phishing/malicious site detection",
         "Usage analytics dashboard",
         "Cross-device sync via Firebase"
+      ],
+      // Added images array
+      images: [
+        '/portfolio/weblocker_1.png',
+        '/portfolio/weblocker_2.png',
       ]
     },
     {
@@ -43,6 +53,11 @@ const Portfolio = () => {
         "Interactive GPA tracker and visualizer",
         "Document management system",
         "Responsive mobile-first design"
+      ],
+      // Added images array
+      images: [
+        '/portfolio/student_portal_1.png',
+        '/portfolio/student_portal_2.png',
       ]
     },
     {
@@ -57,12 +72,16 @@ const Portfolio = () => {
         "Automated overdue notifications",
         "Multi-criteria search functionality",
         "Usage statistics generation"
+      ],
+      // Added images array
+      images: [
+        '/portfolio/library_system_1.png',
+        '/portfolio/library_system_2.png',
       ]
     }
   ];
 
   return (
-    
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       <br />
         {projects.map((project, index) => (
