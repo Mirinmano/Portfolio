@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 
 const Portfolio = () => {
@@ -15,11 +15,6 @@ const Portfolio = () => {
         "Automated backup and restoration functionality",
         "Anomaly detection using ML algorithms",
         "Interactive visualization dashboard"
-      ],
-      // Added images array
-      images: [
-        '/portfolio/file_integrity_1.png',
-        '/portfolio/file_integrity_2.png',
       ]
     },
     {
@@ -34,11 +29,6 @@ const Portfolio = () => {
         "Phishing/malicious site detection",
         "Usage analytics dashboard",
         "Cross-device sync via Firebase"
-      ],
-      // Added images array
-      images: [
-        '/portfolio/weblocker_1.png',
-        '/portfolio/weblocker_2.png',
       ]
     },
     {
@@ -53,11 +43,6 @@ const Portfolio = () => {
         "Interactive GPA tracker and visualizer",
         "Document management system",
         "Responsive mobile-first design"
-      ],
-      // Added images array
-      images: [
-        '/portfolio/student_portal_1.png',
-        '/portfolio/student_portal_2.png',
       ]
     },
     {
@@ -72,22 +57,39 @@ const Portfolio = () => {
         "Automated overdue notifications",
         "Multi-criteria search functionality",
         "Usage statistics generation"
-      ],
-      // Added images array
-      images: [
-        '/portfolio/library_system_1.png',
-        '/portfolio/library_system_2.png',
       ]
     }
   ];
 
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleProjects(projects.length);
+  };
+
+  const showLessProjects = () => {
+    setVisibleProjects(3);
+  };
+
   return (
-    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-      <br />
-        {projects.map((project, index) => (
+    <>
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        <br />
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
-    </ul>
+      </ul>
+      <div className="text-center mt-8">
+        {projects.length > 3 && (
+          visibleProjects < projects.length ? (
+            <button onClick={showMoreProjects} className="btn btn-primary">Show More</button>
+          ) : (
+            <button onClick={showLessProjects} className="btn btn-secondary">Show Less</button>
+          )
+        )}
+        <br></br>
+      </div>
+    </>
   );
 };
 

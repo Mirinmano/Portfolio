@@ -15,41 +15,41 @@ import './App.css';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 500,
       once: false,
     });
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black p-3">
+    <div className="flex flex-col min-h-screen bg-black p-3 mx-auto px-4">
       <Navbar />
 
       <main className="flex-grow">
-        <section id="home">
+        <section id="home" data-aos="fade-up">
           <Home />
         </section>
 
-        <section id="skills">
+        <section id="skills" data-aos="fade-up">
           <Skills />
         </section>
 
-        <section id="problem-solving">
+        <section id="problem-solving" data-aos="fade-up">
           <ProblemSolvingStats />
         </section>
 
-        <section id="about">
+        <section id="about" data-aos="fade-up">
           <About />
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" data-aos="fade-up">
           <Portfolio />
         </section>
 
-        <section id="certificates">
+        <section id="certificates" >
           <Certificates />
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
           <Contact />
         </section>
       </main>

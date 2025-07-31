@@ -25,7 +25,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a href="#home" className="btn btn-ghost normal-case text-xl">Mirin Mano M [cite: 2]</a>
+        <a href="#home" className="btn btn-ghost normal-case text-xl">Mirin Mano M</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

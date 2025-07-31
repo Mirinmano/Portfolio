@@ -1,20 +1,25 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      animation: {
-        'rotate-in-place': 'rotate-in-place 20s linear infinite',
+      fontFamily: {
+        'display': ['Poppins', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
       },
       keyframes: {
-        'rotate-in-place': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
+        'subtle-float': {
+          '0%, 100%': { transform: 'translateY(-2px)' },
+          '50%': { transform: 'translateY(2px)' },
+        }
       },
+      animation: {
+        'subtle-float': 'subtle-float 4s ease-in-out infinite',
+      }
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
-    themes: ["coffee"], 
+    themes: ["coffee"],
   },
 };
