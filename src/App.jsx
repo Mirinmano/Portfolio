@@ -13,6 +13,7 @@ import ProblemSolvingStats from './components/ProblemSolvingStats';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
+import ReloadPrompt from './components/ReloadPrompt'
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-black p-3 mx-auto px-4">
       <Navbar />
+      <ReloadPrompt />
 
       <main className="flex-grow">
         <section id="home" data-aos="fade-up">
