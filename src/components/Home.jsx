@@ -9,9 +9,9 @@ const Home = () => {
         {/* --- Profile Picture with Floating Animation --- */}
         <div className="w-64 h-64 lg:w-80 lg:h-80 animate-subtle-float">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            src=".\1000078290.jpg"
             alt="Mirin Mano"
-            className="rounded-full w-full h-full object-cover shadow-2xl shadow-primary/20"
+            className="rounded-full w-max h-max object-cover shadow-2xl shadow-primary/20"
           />
         </div>
 

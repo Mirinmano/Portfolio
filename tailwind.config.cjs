@@ -11,10 +11,15 @@ module.exports = {
         'subtle-float': {
           '0%, 100%': { transform: 'translateY(-2px)' },
           '50%': { transform: 'translateY(2px)' },
+        },
+        fly: {
+          '0%': { transform: 'translateX(-200%)' },
+          '100%': { transform: 'translateX(200vw)' },
         }
       },
       animation: {
         'subtle-float': 'subtle-float 4s ease-in-out infinite',
+         fly: 'fly linear infinite',
       }
     },
   },

@@ -2,12 +2,14 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import Education from './components/Education';
+import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import Certificates from './components/Certificates';
-import ProblemSolvingStats from './components/ProblemSolvingStats'; // Import the new component
+import ProblemSolvingStats from './components/ProblemSolvingStats';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -41,6 +43,14 @@ function App() {
           <About />
         </section>
 
+        <section id="experience" data-aos="fade-up">
+          <Experience />
+        </section>
+        
+        <section id="education" data-aos="fade-up">
+          <Education />
+        </section>
+        
         <section id="portfolio" data-aos="fade-up">
           <Portfolio />
         </section>
