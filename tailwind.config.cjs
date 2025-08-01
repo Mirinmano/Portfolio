@@ -20,6 +20,15 @@ module.exports = {
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
-    themes: ["coffee"],
+    themes: [
+      {
+        coffee: {
+          ...require("daisyui/src/theming/themes")["coffee"],
+          "base-100": "#1f2937", // Gray 800
+          "base-200": "#374151", // Gray 700
+          "base-300": "#4b5563", // Gray 600
+        },
+      },
+    ],
   },
 };

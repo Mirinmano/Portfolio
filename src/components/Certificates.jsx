@@ -84,7 +84,7 @@ const CertificatesFullCarousel = () => {
   ];
 
   return (
-    <div className="bg-base-100 py-12">
+    <div className="bg-base-400 py-12">
       <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold text-primary mb-4">Certificates & Achievements</h2>
           <p className="text-lg opacity-80">
@@ -92,7 +92,7 @@ const CertificatesFullCarousel = () => {
           </p>
       </div>
 
-      <div className="carousel carousel-center w-full p-4 space-x-4 bg-base-200 rounded-box">
+      <div className="carousel carousel-center w-full p-4 space-x-4 bg-base-400 rounded-box">
         {certificates.map((cert) => (
           <div key={cert.id} id={cert.id} className="carousel-item w-11/12 md:w-2/3 lg:w-1/2">
             <div className="card bg-base-100 shadow-xl w-full">

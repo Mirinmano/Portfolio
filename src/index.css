@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @plugin "daisyui" {
@@ -15,24 +15,14 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at var(--x) var(--y),
-    rgba(245, 158, 11, 0.15),
-    transparent 20vmax
-  );
-  z-index: 999;
+.text-gradient-vertical {
+  background: linear-gradient(to bottom, #d97706, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #FFD700 0%, #D4A017 100%);
+.text-gradient-horizontal {
+    background: linear-gradient(to right, #d97706, #f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

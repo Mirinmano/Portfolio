@@ -4,7 +4,7 @@ import Skills from '../components/Skills';
 const About = () => {
   return (
     <>
-      <div className="hero bg-base-200 " data-aos="fade-in"
+      <div className="hero bg-200-200 " data-aos="fade-in"
     data-aos-delay="300">
         <div className="hero-content flex-col lg:flex-row">
           <img
