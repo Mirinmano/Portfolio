@@ -22,7 +22,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div id="experience" className="py-20 bg-base-100 overflow-hidden">
+    <div id="experience" className="py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-16 px-4">
         <h2 className="text-4xl font-bold text-primary mb-4">Professional Experience</h2>
         <p className="text-lg opacity-80">
